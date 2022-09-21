@@ -45,7 +45,3 @@ def transform_data(spark, pathToTransformFile):
     final_df = df_sql.withColumn("Is_to_JFK_airport", f.when(condition, "YES").otherwise("NO"))
 
     return final_df
-
-#if __name__ == '__main__':
-    #check if the output df is correct
-    #check_location_jfk(-73.968163, 40.80008)
